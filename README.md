@@ -4,7 +4,7 @@ Step 1: Clone the Repo https://github.com/FarooquiRaiyan/machine_test_updated.gi
 
 Step 2:Move to the Machine Test Updated Folder.
 
-Step 3:Create abd Activate the Virtual Environment by (venv\Scripts\activate)
+Step 3:Create and Activate the Virtual Environment by (venv\Scripts\activate)
 
 Step 4 : Install the Packages by pip install requirements.txt
 
