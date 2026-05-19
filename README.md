@@ -16,7 +16,7 @@ Step 7 : Execute the Programme by command uvicorn main:app  --reload
 
 Step 8 : Check if its working for Categories http://localhost:8000/api/categories
 
-Step 9 : Check if its working for Products http://localhost:8000/api/categories
+Step 9 : Check if its working for Products http://localhost:8000/api/products
 
 Step 10 : Go for the  Docs : http://localhost:8000/docs 
 
