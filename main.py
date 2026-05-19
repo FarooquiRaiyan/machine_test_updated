@@ -54,7 +54,7 @@ def get_category_by_id(category_id: int):
         return {"message": "Category not found with this id"}
 
 
-@app.post('/api/category')
+@app.post('/api/categories')
 def add_category(category:CreateCategory):
     db = SessionLocal()
     new_category = Category(category_name = category.category_name)
@@ -65,7 +65,7 @@ def add_category(category:CreateCategory):
     return new_category
 
 
-@app.put('/api/category/{category_id}')
+@app.put('/api/categories/{category_id}')
 def update_category(category:UpdateCategory, category_id: int):
     db = SessionLocal()
     category_update = db.query(Category).filter(Category.id == category_id).first()
@@ -79,7 +79,7 @@ def update_category(category:UpdateCategory, category_id: int):
         return {"message": "Category not found with this id to update"}
 
 
-@app.delete('/api/category/{category_id}')
+@app.delete('/api/categories/{category_id}')
 def delete_category(category_id: int):
     db = SessionLocal()
     category_delete = db.query(Category).filter(Category.id == category_id).first()
@@ -132,7 +132,7 @@ def get_product_by_id(product_id: int):
 
 
 
-@app.post('/api/product')
+@app.post('/api/products')
 def add_product(product: CreateProduct):
     db = SessionLocal()
     new_product = Product(product_name = product.product_name, category_id = product.category_id)
@@ -143,7 +143,7 @@ def add_product(product: CreateProduct):
     return new_product
 
 
-@app.put('/api/product/{product_id}')
+@app.put('/api/products/{product_id}')
 def update_product(product : UpdateProduct, product_id: int):
     db = SessionLocal()
     product_update = db.query(Product).filter(Product.id == product_id).first()
@@ -159,7 +159,7 @@ def update_product(product : UpdateProduct, product_id: int):
     
 
 
-@app.delete('/api/product/{product_id}')
+@app.delete('/api/products/{product_id}')
 def delete_product(product_id: int):
     db = SessionLocal()
     product_delete = db.query(Product).filter(Product.id == product_id).first()
